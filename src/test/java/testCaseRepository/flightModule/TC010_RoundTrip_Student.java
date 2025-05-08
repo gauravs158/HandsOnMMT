@@ -1,5 +1,5 @@
 package testCaseRepository.flightModule;
 
-public class TC005_RoundTrip_ArmedForces {
+public class TC010_RoundTrip_Student {
 
 }

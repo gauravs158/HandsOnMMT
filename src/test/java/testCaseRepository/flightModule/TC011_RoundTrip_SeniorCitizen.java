@@ -1,5 +1,5 @@
 package testCaseRepository.flightModule;
 
-public class TC001_OneWay_RegularFare {
+public class TC011_RoundTrip_SeniorCitizen {
 
 }

@@ -1,5 +1,5 @@
 package testCaseRepository.flightModule;
 
-public class TC010_MultiCity_Regular {
+public class TC009_RoundTrip_Regular {
 
 }

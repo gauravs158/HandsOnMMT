@@ -1,5 +1,5 @@
 package testCaseRepository.flightModule;
 
-public class TC006_Multicity_ArmedForces {
+public class TC003_OneWay_Student {
 
 }
