@@ -21,13 +21,15 @@ public class PropertiesReader {
 	static String url = null;
 	static WebDriver driver;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		driver = getDriverProperties("chromeBrowser");
 		driver.get(getUrl("FlightUrl"));
+		Thread.sleep(5000);
+		driver.quit();
 	}
 	public static WebDriver getDriverProperties(String browserName){
 		try {
-			fis = new FileInputStream("C:\\Users\\gaurav.samantaray\\git\\HandsOnMMT\\src\\test\\resources\\config\\properties\\browserConfigurations.properties");
+			fis = new FileInputStream("C:\\Users\\Gaurav\\git\\HandsOnMMT\\src\\test\\resources\\config\\properties\\browserConfigurations.properties");
 			prop.load(fis);
 			if(browserName.contentEquals("chromeBrowser")) {
 				driver = new ChromeDriver();
@@ -55,7 +57,7 @@ public class PropertiesReader {
 	
 	public static String getUrl(String requiredURL){
 		try {
-			fis = new FileInputStream("C:\\Users\\gaurav.samantaray\\git\\HandsOnMMT\\src\\test\\resources\\config\\properties\\urlConfigurations.properties");
+			fis = new FileInputStream("C:\\Users\\Gaurav\\git\\HandsOnMMT\\src\\test\\resources\\config\\properties\\urlConfigurations.properties");
 			prop.load(fis);
 			if(requiredURL.contentEquals("FlightUrl")) {
 				url = prop.getProperty(requiredURL);
